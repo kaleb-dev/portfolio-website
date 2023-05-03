@@ -1,0 +1,177 @@
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  -webkit-tap-highlight-color: unset !important;
+}
+
+.modalStyle {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  outline: 0 !important;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+
+  .closeButton {
+    background: none;
+    color: #ffffffb6;
+    border: none;
+    font-size: 36px;
+    position: relative;
+    transition: 0.2s;
+  }
+
+  .closeButton:hover {
+    color: #ffffff;
+    transform: scale(1.25);
+  }
+
+  // button {
+  //   display: inline-block;
+  //   border: none;
+  //   padding: 1rem 2rem;
+  //   margin: 0;
+  //   text-decoration: none;
+  //   font-family: sans-serif;
+  //   font-size: 1rem;
+  //   cursor: pointer;
+  //   text-align: center;
+  //   -webkit-appearance: none;
+  //   -moz-appearance: none;
+  // }
+
+  .sitePopup {
+    width: 60%;
+    height: 70%;
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 15px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .rightContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .modalHeading {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .website {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .webLink {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+
+  .modalContent {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    grid-template-areas: "modalLeft modalRight";
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  // .modalContent {
+  //   display: grid; 
+  //   grid-template-columns: 1fr; 
+  //   grid-template-rows: 1fr 1.3fr; 
+  //   gap: 0px 0px; 
+  //   grid-template-areas: 
+  //     "modalLeft"
+  //     "modalRight"; 
+  //   height: 100%;
+  //   width: 100%;
+  //   position: relative;
+  // }
+
+  .bgText {
+    position: absolute;
+    color: black;
+    opacity: 0.02;
+    bottom: -50px;
+    right: -10px;
+    margin-bottom: 0 !important;
+    z-index: 0;
+    white-space: nowrap;
+  }
+
+  .modalLeft {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: modalLeft;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 15px 0 0 15px ;
+  }
+
+  // .modalLeft {
+  //   background-position: top center;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   grid-area: modalLeft;
+  //   padding: 10px;
+  //   z-index: 2;
+  //   border-radius: 15px 15px 0 0 ;
+  // }
+  .modalRight {
+    display: flex;
+    flex-direction: column;
+    grid-area: modalRight;
+    z-index: 2;
+    padding: 40px;
+    justify-content: space-evenly;
+  }
+
+  .resourceHeading {
+    color: black;
+  }
+
+  .siteDesc {
+    color: black !important;
+  }
+
+  .resourceItems {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .tech {
+    padding: 7px 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+  }
+}
+
+.output-wrap {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  padding: 0.5em;
+}
+.output-item {
+  background-color: #f3f738;
+  flex-grow: 1;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}

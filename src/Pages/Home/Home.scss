@@ -1,0 +1,681 @@
+// COLORS
+:root {
+  --color-white: #ffffff;
+  --color-gray: #c4c4c4;
+  --color-black: #000000;
+  --color-blue: #2e3192;
+  --color-light-blue: #03a8a8;
+}
+
+
+#landing {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+
+  span {
+    background: linear-gradient(
+      -45deg,
+      var(--color-blue),
+      var(--color-light-blue)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    background-size: 300%;
+    background-position: -100%;
+
+    animation: gradient 3s infinite alternate-reverse;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  p {
+    max-width: 570px;
+    color: black;
+    text-align: left;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+  }
+
+  .landingContent {
+    border-radius: 25px;
+    padding: 120px 50px;
+    width: 90%;
+    background-color: rgba(242, 242, 242, 0.5);
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .landingText {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+  }
+
+  .landingParagraph {
+    margin-top: 30px;
+  }
+
+  .socialContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-top: 60px;
+
+    .contactBtn {
+      padding: 10px 40px;
+      color: #fff;
+      background-color: #000;
+      border-radius: 30px;
+      transition: 0.2s ease-in-out !important;
+      -webkit-transition: 0.2s ease-in-out !important;
+      border: 2px solid transparent;
+    }
+
+    .contactBtn:hover {
+      background: transparent;
+      border: black solid 2px;
+      color: black !important;
+    }
+
+    #socialLink {
+      padding: 12px;
+      background: #000;
+      border-radius: 50%;
+      transition: 1s;
+      border: none;
+      transition: 0.2s ease-in-out;
+    }
+
+    .instagram {
+      position: relative;
+      background-color: black;
+      z-index: 1;
+    }
+
+    .twitter:hover {
+      background: #00acee !important;
+    }
+
+    .instagram::before {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(
+        45deg,
+        #405de6,
+        #5851db,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d
+      ) !important;
+      z-index: -1;
+      transition: opacity 0.2s ease-in-out;
+      opacity: 0;
+    }
+
+    .instagram:hover::before {
+      opacity: 1;
+    }
+
+    .github:hover {
+      background-color: #2b3137 !important;
+    }
+
+    .socialBlack {
+      display: block;
+    }
+
+    .socialWhite {
+      display: none;
+    }
+  }
+
+  .textGradient {
+    font-weight: 700;
+
+    background-image: linear-gradient(75deg, #b224f5 -50%, #31edf9 150%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .purpBlobMobile {
+    display: none;
+  }
+
+  .blueBlobMobile {
+    display: none;
+  }
+
+  .purpBlob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+
+    right: 100px;
+    top: 0px;
+
+    z-index: 1;
+
+    background: #2e3192;
+    opacity: 1;
+    filter: blur(175px);
+
+    animation: breathe 4s ease-in-out infinite alternate-reverse both;
+    overflow: hidden !important;
+  }
+
+  .blueBlob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+
+    right: -50px;
+    bottom: 0;
+
+    z-index: 1;
+
+    background: #03a8a8;
+    opacity: 1;
+    filter: blur(175px);
+
+    animation: breathe 4s ease-in-out infinite alternate both;
+  }
+
+  .landingDeviceDisplay {
+    height: auto;
+    position: relative;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #devices {
+      height: auto !important;
+      position: relative;
+      z-index: 5;
+      width: 100% !important;
+    }
+
+    .myLaptopSwiper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: 7.6%;
+      width: 76.5%;
+      height: auto;
+    }
+
+    .laptopDisplay {
+      width: 100%;
+      height: auto;
+    }
+
+    .myMobileSwiper {
+      position: absolute;
+      z-index: 1;
+      width: 16.5%;
+      right: 3%;
+      bottom: 2%;
+    }
+
+    .mobileDisplay {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    height: 100%;
+    h1 {
+      font-size: 40px;
+      max-width: unset;
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+
+    a {
+      font-size: 12px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    .bgLogo {
+      width: auto;
+      height: 400px;
+    }
+
+    .landingContent {
+      flex-direction: column;
+      justify-content: space-between;
+      width: 90%;
+      padding: 25px;
+      margin-top: 0 !important;
+      height: 100%;
+      gap: 30px;
+    }
+
+    .purpBlobMobile {
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      z-index: 0;
+
+      right: 50px;
+      top: 50px;
+      filter: blur(100px);
+      -webkit-filter: blur(100px);
+      border-radius: 50%;
+      background: #2e3192;
+    }
+
+    .blueBlobMobile {
+      display: block;
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      z-index: 0;
+
+      right: 0 !important;
+      left: 50px;
+      bottom: 50px;
+      filter: blur(100px);
+      -webkit-filter: blur(100px);
+      border-radius: 50%;
+      background: #03a8a8;
+    }
+
+    .socialContainer {
+      width: 100%;
+      justify-content: space-between;
+
+      .contactBtn {
+        padding: 10px 20px;
+      }
+
+      #icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      #socialLink {
+        padding: 12px;
+      }
+    }
+
+    .purpBlob {
+      display: none;
+    }
+
+    .blueBlob {
+      display: none;
+    }
+
+    .landingText {
+      max-width: unset;
+    }
+
+    .landingDeviceDisplay {
+      max-width: unset;
+    }
+
+    .socialContainer {
+      margin-top: 10px;
+    }
+  }
+}
+
+#work {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin: 50px 0;
+
+  h1 {
+    text-align: left;
+    grid-area: text;
+  }
+
+  .workContainer {
+    width: 90%;
+    // border-top: 1px solid rgba(43, 43, 43, 0.5);
+    // border-bottom: 1px solid rgba(43, 43, 43, 0.5);
+  }
+
+  .workGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-auto-flow: row;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+
+    grid-template-areas:
+      "frugal frugal frugal frugal frugal"
+      "freebie freebie freebie fitted fitted"
+      "resellology resellology resellology resellology resellology"
+      "axel axel unity unity unity"
+      "resellersBasement resellersBasement resellersBasement resellersBasement resellersBasement";
+  }
+
+  #workBox {
+    border-radius: 25px;
+    height: 500px;
+    // transition: transform 0.2s ease-in-out;
+
+    .hoverBg {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 25px;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.2s linear, opacity 0.2s linear;
+    }
+
+    .hoverInfo {
+      display: none;
+
+      h1 {
+        margin-bottom: 0 !important;
+      }
+
+      .expandCircle {
+        background: #ffffff;
+        border-radius: 50%;
+        transition: 1s;
+        border: none;
+        padding: 15px;
+      }
+    }
+  }
+
+  #workBox:hover {
+    transform: scale(0.99);
+
+    .hoverBg {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .hoverInfo {
+      display: flex;
+      z-index: 99;
+      position: relative;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .frugal {
+    grid-area: frugal;
+    background: url(../../Assets/Images/frugalWork.webp);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .resellology {
+    grid-area: resellology;
+    background: url(../../Assets/Images/resellologyWork.webp);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .fitted {
+    grid-area: fitted;
+    background: url(../../Assets/Images/fittedWork.webp);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .freebie {
+    grid-area: freebie;
+    background: url(../../Assets/Images/freebieWork.webp);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .axel {
+    grid-area: axel;
+    background: url(../../Assets/Images/axelWork.webp);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .resellersBasement {
+    grid-area: resellersBasement;
+    background: url(../../Assets/Images/rbWork.webp);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .unity {
+    grid-area: unity;
+    background: url(../../Assets/Images/unityWork.webp);
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+//Dark Mode
+
+.dark {
+  h1 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #ffffff !important;
+  }
+
+  #landing {
+    .landingContent {
+      background-color: rgba(32, 32, 32, 0.7);
+    }
+
+    .contactBtn {
+      color: #000 !important;
+      background-color: #ffff;
+    }
+
+    .contactBtn:hover {
+      background: transparent;
+      border: #fff solid 2px;
+      color: #fff !important;
+    }
+
+    .socialBlack {
+      display: none;
+    }
+
+    .socialWhite {
+      display: block;
+    }
+
+    #socialLink {
+      background: #fff;
+    }
+
+    .landingDeviceDisplay {
+      .displayBlack {
+        display: none;
+      }
+
+      .displayWhite {
+        display: block;
+      }
+    }
+  }
+
+
+}
+
+.landingDeviceDisplay {
+  .displayBlack {
+    display: block;
+  }
+
+  .displayWhite {
+    display: none;
+  }
+}
+
+@keyframes gradient {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 100%;
+  }
+}
+
+@keyframes breathe {
+  from {
+    background: #2e3192;
+  }
+
+  to {
+    background-color: #03a8a8;
+  }
+}
+
+.bgLogo {
+  position: fixed;
+  opacity: 0.2;
+  height: auto;
+  width: 250px;
+  bottom: 0px;
+  left: 10px;
+}
+
+.socialBlackWork {
+  display: none;
+}
+.socialWhiteWork {
+  display: block;
+}
+
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  -webkit-tap-highlight-color: unset !important;
+}
+
+.modalStyle {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  outline: 0 !important;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+
+  .closeButton {
+    background: none;
+    color: #ffffffb6;
+    border: none;
+    font-size: 36px;
+    position: relative;
+    transition: 0.2s;
+  }
+
+  .closeButton:hover {
+    color: #ffffff;
+    transform: scale(1.25);
+  }
+
+  button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .sitePopup {
+    width: 60%;
+    height: 50%;
+    background-color: white !important;
+    border-radius: 15px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+

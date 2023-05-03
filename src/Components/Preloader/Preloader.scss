@@ -1,0 +1,144 @@
+// preloader
+.preloader {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: grid;
+    place-content: center;
+
+    #logoPreloader {
+        width: 110px;
+        height: auto;
+      }
+
+      .black {
+        display: block !important;
+      }
+
+      .white {
+        display: none !important;
+      }
+  
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    &__left {
+      margin-right: 1rem;
+    }
+  
+    &__right {
+      margin-left: 1rem;
+      width: max-content;
+      height: 4rem;
+      overflow: hidden;
+      position: relative;
+  
+      &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+          to bottom,
+          #ffffff 5%,
+          rgba(#ffffff, 0) 30%
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+          to top,
+          #ffffff 5%,
+          rgba(#ffffff, 0) 30%
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        
+      }
+    }
+  
+    &__text {
+      font-size: 30px;
+      line-height: 210%;
+      letter-spacing: 0.19em;
+      color: black;
+      animation: preloaderTextAnim 15s linear;
+      animation-delay: 3s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+.dark {
+  .preloader {
+    background-color: #171717 !important;
+
+
+  .black {
+    display: none !important;
+  }
+
+  .white {
+    display: block !important;
+  }
+
+  &__right {
+
+    &::before {
+      background-image: linear-gradient(
+        to bottom,
+        #171717 5%,
+        rgba(#171717, 0) 30%
+      );
+    }
+    &::after {
+      background-image: linear-gradient(
+        to top,
+        #171717 5%,
+        rgba(#171717, 0) 30%
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      
+    }
+  }
+
+  &__text {
+    color: rgb(255, 255, 255);
+  }
+
+}
+
+}
+
+
+
+@keyframes preloaderTextAnim {
+    0% {
+      transform: translateY(0%);
+    }
+    50%, 100% {
+      transform: translateY(-600%);
+    }
+  }

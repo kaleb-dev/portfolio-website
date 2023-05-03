@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Ilisarniq-Light';
+  src: url('Ilisarniq-Light.eot');
+  src: url('Ilisarniq-Light.eot?#iefix') format('embedded-opentype'),
+       url('Ilisarniq-Light.woff2') format('woff2'),
+       url('Ilisarniq-Light.woff') format('woff'),
+       url('Ilisarniq-Light.ttf')  format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Ilisarniq-Regular';
+  src: url('Ilisarniq-Regular.eot');
+  src: url('Ilisarniq-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Ilisarniq-Regular.woff2') format('woff2'),
+       url('Ilisarniq-Regular.woff') format('woff'),
+       url('Ilisarniq-Regular.ttf')  format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ilisarniq-Demi';
+  src: url('Ilisarniq-Demi.eot');
+  src: url('Ilisarniq-Demi.eot?#iefix') format('embedded-opentype'),
+       url('Ilisarniq-Demi.woff2') format('woff2'),
+       url('Ilisarniq-Demi.woff') format('woff'),
+       url('Ilisarniq-Demi.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ilisarniq-Bold';
+  src: url('Ilisarniq-Bold.eot');
+  src: url('Ilisarniq-Bold.eot?#iefix') format('embedded-opentype'),
+       url('Ilisarniq-Bold.woff2') format('woff2'),
+       url('Ilisarniq-Bold.woff') format('woff'),
+       url('Ilisarniq-Bold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ilisarniq-Black';
+  src: url('Ilisarniq-Black.eot');
+  src: url('Ilisarniq-Black.eot?#iefix') format('embedded-opentype'),
+       url('Ilisarniq-Black.woff2') format('woff2'),
+       url('Ilisarniq-Black.woff') format('woff'),
+       url('Ilisarniq-Black.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("../../Fonts/CircularStd-Book.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "D-DIN Condensed";
+  src: url("../../Fonts/D-DINCondensed-Bold.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mark Pro";
+  src: url("../../Fonts/MarkPro-Heavy.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap');
+
+

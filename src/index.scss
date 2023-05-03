@@ -1,0 +1,123 @@
+@import './Assets/Fonts/Ilisarniq/style.css';
+
+
+$font-1: "Ilisarniq-Light", sans-serif;
+$font-2: "Ilisarniq-Bold", sans-serif;
+$font-3: "D-DIN Condensed", sans-serif;
+$font-4: "Ilisarniq-Regular ", sans-serif;
+$font-5: "D-DIN Condensed", sans-serif;
+$font-6: "Poppins", sans-serif;
+
+
+
+
+body {
+  margin: 0;
+  font-family: $font-4 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff !important;
+  color: white !important;
+  overflow-x: hidden !important;
+
+  scroll-behavior: smooth;
+  transition: 0.5s ease-in-out;
+  // cursor: auto !important;
+  
+
+}
+
+
+h1,h2,h3,h5,p,a {
+  color: black;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+code {
+  font-family: $font-1 !important;
+}
+
+h1 {
+  font-size: 55px !important;
+  font-family: $font-2 !important;
+  letter-spacing: -0.03em;
+  color: var(--color-black);
+  display: block;
+  text-align: left;
+  max-width: 800px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h3 {
+    font-family: $font-3;
+    font-size: 24px !important;
+}
+
+h2 {
+    font-family: $font-2;
+    font-size: 40px !important;
+}
+
+h4 {
+  font-size: 34px !important;
+  font-family: $font-4;
+}
+
+h6 {
+  // font-size: 1px !important;
+  font-family: $font-2;
+  font-weight: 600 !important;
+  color: #f9f7f6;
+  letter-spacing: 1rem;
+  font-size: 29.42vmin !important;
+    writing-mode: unset;
+    letter-spacing: -0.3rem;
+    white-space: pre;
+    bottom: 20px;
+}
+
+li {
+  font-family: $font-6;
+  letter-spacing: 0.05em;
+}
+
+h5 {
+    font-family: $font-3;
+    font-size: 250px !important;
+}
+
+p {
+  font-family: $font-1 !important;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none !important;
+  color: unset !important;
+}
+
+.dark {
+  background-color: #171717 !important;
+  transition: 0.5s ease-in-out;
+
+  h6 {
+    color:#060809;
+  }
+
+
+  h1,h2,h3,h5,p,a {
+    color: #ffffff;
+  }
+}
+
+.light {
+}
+

@@ -1,0 +1,431 @@
+#footer {
+    position: relative;
+    bottom: 0;
+    overflow-x: hidden;
+    width: 100%;
+    z-index: 9;
+
+    ul {
+        display: inline-block;
+        padding: 0;
+    }
+
+    li {
+        list-style-type: none;
+        text-decoration: none;
+        padding-bottom: 10px;
+    }
+
+    a {
+        font-weight: 400;
+        font-size: 13px !important;
+        text-decoration: none;
+        opacity: .8;
+        color: #000 !important;
+        transition: .2s;
+    }
+
+    a:hover {
+        opacity: 1;
+    }
+
+    p {
+        margin: 0 !important;
+        font-size: 14px;
+    }
+
+    .footerContainer {
+        position: relative;
+        border-radius: 25px 25px 0 0 ;
+        padding: 80px 50px;
+        width: 90%;
+        background-color: rgba(242, 242, 242, 0.5);
+        z-index: 100;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    #footerLogo {
+        width: 100px;
+        height: auto;
+    }
+
+    .logoWhite {
+        display: none !important;
+    }
+
+    .logoBlack {
+        display: block !important;
+    }
+
+    .socialContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-end;
+        margin-top: 60px;
+    
+        .contactBtn {
+          padding: 10px 40px;
+          color: #fff !important;
+          background-color: #000;
+          border-radius: 30px;
+          transition: 0.2s ease-in-out !important;
+          -webkit-transition: 0.2s ease-in-out !important;
+          border: 2px solid transparent;
+          font-size: 16px !important;
+          white-space: nowrap;
+        }
+    
+        .contactBtn:hover {
+          background: transparent;
+          border: black solid 2px;
+          color: black !important;
+        }
+    
+        #socialLink {
+          padding: 12px;
+          background: #000;
+          border-radius: 50%;
+          transition: 1s;
+          border: none;
+          transition: 0.2s ease-in-out;
+        }
+    
+        .instagram {
+          position: relative;
+          background-color: black;
+          z-index: 1;
+        }
+    
+        .twitter:hover {
+          background: #00acee !important;
+        }
+    
+        .instagram::before {
+          position: absolute;
+          content: "";
+          border-radius: 50%;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-image: linear-gradient(
+            45deg,
+            #405de6,
+            #5851db,
+            #833ab4,
+            #c13584,
+            #e1306c,
+            #fd1d1d
+          ) !important;
+          z-index: -1;
+          transition: opacity 0.2s ease-in-out;
+          opacity: 0;
+        }
+    
+        .instagram:hover::before {
+          opacity: 1;
+        }
+    
+        .github:hover {
+          background-color: #2b3137 !important;
+        }
+    
+        .socialBlack {
+          display: block;
+        }
+    
+        .socialWhite {
+          display: none;
+        }
+      }
+
+
+  .purpBlob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    left: 100px;
+    top: 0px;
+
+    z-index: 1;
+
+    background: #2e3192;
+    opacity: 1;
+    filter: blur(175px);
+
+    animation: breathe 4s ease-in-out infinite alternate-reverse both;
+    overflow: hidden !important;
+  }
+
+  .blueBlob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    right: -50px;
+    bottom: 0;
+
+    z-index: 1;
+
+    background: #03a8a8;
+    opacity: 1;
+    filter: blur(175px);
+
+    animation: breathe 4s ease-in-out infinite alternate both;
+  }
+
+    .company {
+        opacity: 0.5;
+    }
+
+    .footerLeftText {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        min-width: 200px;
+    }
+
+    .socialLogo {
+        width: 20px;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    .footerTop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+
+        gap: 30px;
+
+    }
+
+    .navlogo {
+        width: 50px;
+        height: auto;
+    }
+
+    .footerRedirects {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .listHeader {
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 15px !important;
+        text-decoration: underline;
+
+    }
+
+    .listText {
+        text-decoration: none;
+        font-size: 15px;
+        white-space: nowrap;
+        transition: 400ms;
+        border-bottom: 2px solid transparent;
+        &::after {
+           content: '';
+           display: block;
+           width: 0;
+           height: 2px;
+           background: #000;
+           transition: width 0.3s;
+        }
+      
+        &:hover::after {
+           width: 100%;
+           transition: width 0.3s;
+        }
+      }
+
+
+    .dashboardButton {
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        display: inline-block;
+        transition: 0.2s !important;
+        -webkit-transition: 0.2s !important;
+        z-index: 1;
+        padding: 12px 28px !important;
+        color: white;
+        background: transparent;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+
+    .dashboardButton:hover {
+        background: white;
+        color: black !important;
+    }
+
+    .footerBottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .backToTopBtn {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+
+    @media (max-width: 905px) {
+        padding-top: 40px;
+
+        .footerTop {
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .footerBottom {
+            margin-top: 50px;
+        }
+
+        .footerLeftText {
+            text-align: center;
+        }
+
+        .alignLogo {
+            text-align: center;
+        }
+
+        .navlogo {
+            width: 50px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        .footerContainer {
+            position: relative;
+            padding: 10px 0 60px 0;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1400px;
+            z-index: 1;
+        }
+
+        .footerTop {
+            display: grid;
+            gap: 20px;
+            grid-template:
+                "btn"
+                "links"
+                "logo";
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footerLeft {
+            grid-area: logo;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            justify-items: center;
+
+        }
+
+        .startResellingBtn {
+            margin: 0 auto;
+            grid-area: btn;
+        }
+
+        .footerRedirects {
+            display: grid;
+            align-items: flex-start;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 100%;
+            grid-area: links;
+            gap: 30px 60px;
+        }
+
+        .dashboardButton {
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+.dark {
+
+    #footer {
+
+
+    .footerContainer {
+        background-color: rgba(32, 32, 32, 0.7) !important;
+        
+        .contactBtn {
+            color: #000 !important;
+            background-color: #ffff;
+          }
+      
+          .contactBtn:hover {
+            background: transparent;
+            border: #fff solid 2px;
+            color: #fff !important;
+          }
+      
+          .socialBlack {
+            display: none;
+          }
+      
+          .socialWhite {
+            display: block;
+          }
+      
+          #socialLink {
+            background: #fff;
+          }
+
+        .logoWhite {
+            display: block !important;
+        }
+    
+        .logoBlack {
+            display: none !important;
+        }
+
+        .listText {
+            color: white !important;
+            &::after {
+               background: white;
+            }
+        
+          }
+    }
+
+
+}
+
+
+}
