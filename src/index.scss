@@ -107,6 +107,7 @@ a {
 .dark {
   background-color: #171717 !important;
   transition: 0.5s ease-in-out;
+  --cursor-color: #fff;
 
   h6 {
     color:#060809;
@@ -119,5 +120,6 @@ a {
 }
 
 .light {
+  --cursor-color: #FFFF;
 }
 

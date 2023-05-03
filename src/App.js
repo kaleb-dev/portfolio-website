@@ -22,6 +22,41 @@ function App() {
 
   return (
     <ThemeProvider>
+            <AnimatedCursor
+      innerSize={10}
+      outerSize={40}
+      outerAlpha={0.4}
+      innerScale={4}
+      outerScale={0}
+      hasBlendMode={true}
+      outerStyle={{
+        border: '1.5px solid var(--cursor-color)',
+        backgroundColor: '255, 0, 0, 0',
+        color: 'var(--cursor-color)',
+        zIndex: 99999,
+        mixBlendMode: 'difference'
+
+      }}
+      innerStyle={{
+        backgroundColor: 'var(--cursor-color)',
+        color: 'var(--cursor-color)',
+        zIndex: 99999,
+        mixBlendMode: 'difference'
+      }}
+              clickables={[
+        'a',
+        'input[type="text"]',
+        'input[type="email"]',
+        'input[type="number"]',
+        'input[type="submit"]',
+        'input[type="image"]',
+        'label[for]',
+        'select',
+        'textarea',
+        'button',
+        '.link'
+      ]}
+      />
       <BrowserRouter>
       <Navbar homeNav="navbar navbar-expand-lg  bg-custom" />
         <Routes>
