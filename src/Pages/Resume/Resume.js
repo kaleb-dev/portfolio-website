@@ -5,7 +5,6 @@ import ResumePage from "../../Assets/Kaleb Tessema.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
 import "./Resume.scss";
 import { Link } from "react-router-dom";
-import BgImage from '../../Assets/Images/resumeBg.png'
 
 function Resume() {
   const [numPages, setNumPages] = useState(null);
@@ -22,16 +21,13 @@ function Resume() {
       {/* <div className="blueBlobMobile" />
       <div className="purpBlobMobile" /> */}
       <div
-        className="landingContent"
+        className="landingContent1"
         style={{
           height: "100%",
           marginTop: 15,
           marginBottom: 50,
           display: "block",
           padding: 75,
-          backgroundImage: `url(${BgImage})`,
-          backgroundPosition: 'center center',
-          backgroundSize: 'cover'
         }}
       >
         <h1>Resume</h1>
