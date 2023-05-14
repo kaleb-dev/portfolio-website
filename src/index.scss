@@ -9,8 +9,6 @@ $font-5: "D-DIN Condensed", sans-serif;
 $font-6: "Poppins", sans-serif;
 
 
-
-
 body {
   margin: 0;
   font-family: $font-4 !important;
@@ -28,7 +26,7 @@ body {
 }
 
 
-h1,h2,h3,h5,p,a {
+h1,h2,h3,h5,p,a,textarea, input  {
   color: black;
 }
 
@@ -97,6 +95,11 @@ p {
   margin: 0;
   font-size: 16px;
   font-weight: 200;
+  // margin-bottom: 0 !important;
+}
+
+textarea, input {
+  font-family: $font-1 !important;
 }
 
 a {

@@ -7,7 +7,6 @@
   --color-light-blue: #03a8a8;
 }
 
-
 #landing {
   height: 100%;
   display: flex;
@@ -676,6 +675,31 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+}
+
+
+.landingContent1 .socialContainer  #icon {
+  position: relative;
+  animation: 3s infinite alternate bounceRight;
+}
+
+@keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  60% {
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
   }
 }
 

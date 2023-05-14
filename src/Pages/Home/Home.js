@@ -35,10 +35,7 @@ import rbMobile from "../../Assets/Images/rbMobile.webp";
 
 //Social Icons
 // import logoOutline from "../../Assets/Images/logoOutlineGrey.webp";
-import { BsTwitter } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
-import { BsArrowUpRight } from "react-icons/bs";
+import { BsTwitter, BsInstagram, BsGithub, BsArrowUpRight } from "react-icons/bs";
 
 
 const Modal = lazy(() => import('../../Components/Modal/Modal'));

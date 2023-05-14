@@ -10,6 +10,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Resume from "./Pages/Resume/Resume"
 import NotFound from "./Pages/NotFound/NotFound"
+import Contact from "./Pages/Contact/Contact";
 
 
 
@@ -65,6 +66,7 @@ function App() {
     {/* </Route> */}
           <Route path="*" element={<NotFound />} />
           <Route path="/resume" element={<Resume/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

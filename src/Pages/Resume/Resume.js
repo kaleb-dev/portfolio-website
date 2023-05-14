@@ -32,7 +32,7 @@ function Resume() {
       >
         <h1>Resume</h1>
         <p style={{marginTop: 20, marginBottom: 20, maxWidth: 'unset'}}>
-          Feel free to reach out at my <Link className="underline" style={{fontWeight:700}} to="/contact">Contact Page</Link>. Also if you would like to <a href={ResumePage} className="underline"style={{fontWeight:700}} download='Kaleb_Tessema.pdf'>Download</a>
+          Feel free to reach out at my <Link className="underline" style={{fontWeight:700}} to="/contact">Contact Page</Link>. Also if you would like to <a href={ResumePage} className="underline"style={{fontWeight:700}} download='Kaleb_Tessema.pdf'>Download.</a>
         </p>
         <div style={{ padding: 50 }}>
           <Document file={ResumePage} onLoadSuccess={onDocumentLoadSuccess}>
@@ -43,6 +43,15 @@ function Resume() {
         <div className="blueBlob" />
         <div className="purpBlob" style={{ right: 0, left: 100 }} />
       </div>
+      <h6
+        style={{
+          position: "fixed",
+          left: "50%",
+          transform: "translate(-50%, 0)",
+        }}
+      >
+        RESUME
+      </h6>
       <Footer />
     </div>
   );
