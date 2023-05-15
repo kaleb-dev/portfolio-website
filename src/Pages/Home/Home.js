@@ -63,7 +63,7 @@ function Landing() {
           <div className="socialContainer">
             <a
               className="contactBtn"
-              href="/"
+              href="/contact"
               target="_blank"
               rel="noopener noreferrer"
             >
