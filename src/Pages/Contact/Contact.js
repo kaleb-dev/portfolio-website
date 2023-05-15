@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../../Components/Footer/Footer";
 import "../Home/Home.scss";
 import { BsArrowRight } from "react-icons/bs";
+import '../Resume/Resume.scss'
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -33,7 +34,7 @@ const Contact = () => {
           <p style={{ fontSize: '24px' }}>We'll be in touch soon.</p>
           <div style={{display: "flex", flexDirection:'row', gap: 20, marginTop: '20px', alignItems:'center',justifyContent:'center'}}>
             <p style={{marginBottom: 0}}>
-              <a href="/">Back Home</a>
+              <a href="/" className="underline">Back Home</a>
             </p>
             <div className="socialContainer"                 style={{marginTop: 0, display: 'block'}}>
             <BsArrowRight
@@ -95,6 +96,7 @@ const Contact = () => {
           <a
             style={{ fontWeight: "bold" }}
             href="mailto:business.kalebtessema@gmail.com"
+            className="underline"
           >
             business.kalebtessema@gmail.com
           </a>
@@ -107,7 +109,7 @@ const Contact = () => {
             gap: "30px",
             width: "50%",
           }}
-          action="https://mailthis.to/ktemail"
+          action="https://formspree.io/f/myyavpaa"
           onSubmit={handleSubmit}
           method="POST"
           target="_blank"
