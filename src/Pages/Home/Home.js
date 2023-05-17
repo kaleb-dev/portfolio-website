@@ -64,14 +64,12 @@ function Landing() {
             <a
               className="contactBtn"
               href="/contact"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Contact me
             </a>
             <a
               id="socialLink"
-              href="/"
+              href="https://twitter.com/kalebt_dev"
               target="_blank"
               rel="noopener noreferrer"
               className="twitter"
@@ -92,7 +90,7 @@ function Landing() {
             <a
               id="socialLink"
               className="instagram"
-              href="/"
+              href="https://www.instagram.com/kaleb.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -112,7 +110,7 @@ function Landing() {
             <a
               id="socialLink"
               className="github"
-              href="/"
+              href="https://github.com/kaleb-dev"
               target="_blank"
               rel="noopener noreferrer"
             >

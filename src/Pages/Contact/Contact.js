@@ -74,7 +74,9 @@ const Contact = () => {
     borderSize: "5px",
     backgroundColor: "rgb(255,255,255,0.5)",
     resize: "none",
+    borderColor:"rgb(0,0,0,0.5)"
   };
+  
 
   return (
     <div id="landing" style={{ position: "relative" }}>
@@ -109,7 +111,7 @@ const Contact = () => {
             gap: "30px",
             width: "50%",
           }}
-          action="https://formspree.io/f/myyavpaa"
+          action="https://formspree.io/f/myyavpaa"    
           onSubmit={handleSubmit}
           method="POST"
           target="_blank"
