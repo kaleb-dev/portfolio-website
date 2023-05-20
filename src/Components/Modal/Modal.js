@@ -14,8 +14,8 @@ const Modal = ({ open, onClose, name, image, webLink, website, technologies = []
           onClose={onClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
-          
         >
+          
           <div class="modalStyle">
             <div
               className="modalHeader"

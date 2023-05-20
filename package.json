@@ -24,6 +24,7 @@
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "sass": "^1.59.3",
+    "styled-components": "^6.0.0-rc.1",
     "swiper": "^9.1.1",
     "web-vitals": "^3.3.0"
   },

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <ThemeProvider>
-            <AnimatedCursor
+            {/* <AnimatedCursor
       innerSize={10}
       outerSize={40}
       outerAlpha={0.4}
@@ -57,7 +57,7 @@ function App() {
         'button',
         '.link'
       ]}
-      />
+      /> */}
       <BrowserRouter>
       <Navbar homeNav="navbar navbar-expand-lg  bg-custom" />
         <Routes>
