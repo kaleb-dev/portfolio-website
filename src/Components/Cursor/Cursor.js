@@ -5,7 +5,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 
 /* -------------------------- Internal Dependencies ------------------------- */
-import useIsMounted from '../Utils/useIsMounted';
+import useIsMounted from '../../Utils/useIsMounted';
 
 const Cursor = () => {
   const dot = useRef(null);

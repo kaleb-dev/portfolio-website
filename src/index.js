@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Cursor from "./Components/Cursor/Cursor";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Cursor/>
     <App />
   </React.StrictMode>
 );

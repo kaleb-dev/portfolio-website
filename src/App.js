@@ -11,6 +11,7 @@ import Footer from "./Components/Footer/Footer";
 import Resume from "./Pages/Resume/Resume"
 import NotFound from "./Pages/NotFound/NotFound"
 import Contact from "./Pages/Contact/Contact";
+import Cursor from "./Components/Cursor/Cursor";
 
 
 
@@ -58,6 +59,7 @@ function App() {
         '.link'
       ]}
       /> */}
+      <Cursor/>
       <BrowserRouter>
       <Navbar homeNav="navbar navbar-expand-lg  bg-custom" />
         <Routes>
