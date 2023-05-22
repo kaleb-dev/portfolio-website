@@ -16,21 +16,27 @@ function Footer({ style }) {
         <div className="purpBlob" />
         <div className="footerTop">
           <div class="footerLeft">
-            <img id="footerLogo" className="logoWhite" src={logoWhite} alt="logo" />
+            <img
+              id="footerLogo"
+              className="logoWhite"
+              src={logoWhite}
+              alt="logo"
+            />
             <img id="footerLogo" className="logoBlack" src={logo} alt="logo" />
 
             <div class="footerLeftText">
               <p className="company">© Copyright 2023</p>
-              <p>Made by <b style={{fontWeight:'bold'}}>Kaleb Tessema</b></p>
+              <p>
+                Made by <b style={{ fontWeight: "bold" }}>Kaleb Tessema</b>
+              </p>
             </div>
           </div>
           <div className="footerRedirects">
-
             <ul>
               <p className="listHeader">Pages</p>
               <li>
-                <a href="mailto:support@resellology.io" className="listText">
-                Portfolio
+                <a href="mailto:support@resellology.io" className="listText" id="cardHover">
+                  Portfolio
                 </a>
               </li>
               <li>
@@ -39,6 +45,7 @@ function Footer({ style }) {
                   target="_blank"
                   rel="noreferrer"
                   className="listText"
+                  id="cardHover"
                 >
                   Resume
                 </a>
@@ -53,7 +60,7 @@ function Footer({ style }) {
               <p className="listHeader">Social</p>
               <li>
                 <a href="mailto:support@resellology.io" className="listText">
-                Portfolio
+                  Portfolio
                 </a>
               </li>
               <li>
@@ -133,8 +140,8 @@ function Footer({ style }) {
                 id="icon"
                 className="socialWhite"
               />
-              </a>
-              <a
+            </a>
+            <a
               className="contactBtn"
               href="/"
               target="_blank"

@@ -111,6 +111,8 @@ a {
   background-color: #171717 !important;
   transition: 0.5s ease-in-out;
   --cursor-color: #fff;
+  --text-hover: #000;
+  --text-bg: #fff;
 
   h6 {
     color:#060809;
@@ -139,7 +141,9 @@ a {
 }
 
 .light {
-  --cursor-color: #FFFF;
+  --cursor-color: #000;
+  --text-hover: #fff;
+  --text-bg: #000;
 
   .underline, .menu, .listText {
     &::after {
@@ -157,4 +161,5 @@ a {
    }
   }
 }
+
 

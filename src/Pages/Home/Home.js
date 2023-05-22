@@ -1,4 +1,4 @@
-import React, { useState,lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import "./Home.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Outlet } from "react-router-dom";
@@ -35,12 +35,14 @@ import rbMobile from "../../Assets/Images/rbMobile.webp";
 
 //Social Icons
 // import logoOutline from "../../Assets/Images/logoOutlineGrey.webp";
-import { BsTwitter, BsInstagram, BsGithub, BsArrowUpRight } from "react-icons/bs";
+import {
+  BsTwitter,
+  BsInstagram,
+  BsGithub,
+  BsArrowUpRight,
+} from "react-icons/bs";
 
-
-const Modal = lazy(() => import('../../Components/Modal/Modal'));
-
-
+const Modal = lazy(() => import("../../Components/Modal/Modal"));
 
 function Landing() {
   return (
@@ -61,10 +63,7 @@ function Landing() {
             creating user-centric, delightful, and human experiences.
           </p>
           <div className="socialContainer">
-            <a
-              className="contactBtn"
-              href="/contact"
-            >
+            <a className="contactBtn" href="/contact">
               Contact me
             </a>
             <a
@@ -189,6 +188,7 @@ function Work() {
               className="hoverBg"
               onClick={onClickOpenFrugal}
               onClickOpen={() => setOpenFrugal(true)}
+              id="cardPopup"
             >
               <div className="hoverInfo">
                 <h4>Frugal Season</h4>
@@ -207,16 +207,16 @@ function Work() {
               </div>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
-            <Modal
-              open={openFrugal}
-              onClose={onClickCloseFrugal}
-              name="Frugal"
-              image={frugalLaptop}
-              technologies={["React", "JavaScript", "CSS"]}
-              website="frugalseason.com"
-              webLink="https://www.frugalseason.com/"
+              <Modal
+                open={openFrugal}
+                onClose={onClickCloseFrugal}
+                name="Frugal"
+                image={frugalLaptop}
+                technologies={["React", "JavaScript", "CSS"]}
+                website="frugalseason.com"
+                webLink="https://www.frugalseason.com/"
               />
-                    </Suspense>
+            </Suspense>
           </div>
           <div id="workBox" className="freebie" data-aos="fade-right">
             <div
@@ -225,6 +225,7 @@ function Work() {
               onClickOpen={() => setOpenFreebie(true)}
               data-aos="fade-down"
               data-aos-delay="400"
+              id="cardPopup"
             >
               <div className="hoverInfo">
                 <h4>Freebie Frenzy</h4>
@@ -243,16 +244,16 @@ function Work() {
               </div>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
-            <Modal
-              open={openFreebie}
-              onClose={onClickCloseFreebie}
-              name="Freebie"
-              image={freebieLaptop}
-              website="freebiefrenzy.io"
-              webLink="https://www.freebiefrenzy.io"
-              technologies={["React", "JavaScript", "CSS", "asdasd"]}
+              <Modal
+                open={openFreebie}
+                onClose={onClickCloseFreebie}
+                name="Freebie"
+                image={freebieLaptop}
+                website="freebiefrenzy.io"
+                webLink="https://www.freebiefrenzy.io"
+                technologies={["React", "JavaScript", "CSS", "asdasd"]}
               />
-                    </Suspense>
+            </Suspense>
           </div>
           <div
             id="workBox"
@@ -264,6 +265,7 @@ function Work() {
               className="hoverBg"
               onClick={onClickOpenFitted}
               onClickOpen={() => setOpenFitted(true)}
+              id="cardPopup"
             >
               <div className="hoverInfo">
                 <h4>Fitted IOS</h4>
@@ -282,22 +284,23 @@ function Work() {
               </div>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
-            <Modal
-              open={openFitted}
-              onClose={onClickCloseFitted}
-              name="Fitted"
-              image={fittedLaptop}
-              website="fittedios.com"
-              webLink="https://fittedios.com/"
-              technologies={["React", "JavaScript", "CSS", "asdasd"]}
+              <Modal
+                open={openFitted}
+                onClose={onClickCloseFitted}
+                name="Fitted"
+                image={fittedLaptop}
+                website="fittedios.com"
+                webLink="https://fittedios.com/"
+                technologies={["React", "JavaScript", "CSS", "asdasd"]}
               />
-                    </Suspense>
+            </Suspense>
           </div>
           <div id="workBox" className="resellology" data-aos="fade-in">
             <div
               className="hoverBg"
               onClick={onClickOpenResellology}
               onClickOpen={() => setOpenResellology(true)}
+              id="cardPopup"
             >
               <div className="hoverInfo">
                 <h4>Resellology+</h4>
@@ -316,22 +319,23 @@ function Work() {
               </div>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
-            <Modal
-              open={openResellology}
-              onClose={onClickCloseResellology}
-              name="Resellology"
-              image={resellologyLaptop}
-              website="resellology.io"
-              webLink="https://www.resellology.io/"
-              technologies={["React", "JavaScript", "CSS", "asdasd"]}
+              <Modal
+                open={openResellology}
+                onClose={onClickCloseResellology}
+                name="Resellology"
+                image={resellologyLaptop}
+                website="resellology.io"
+                webLink="https://www.resellology.io/"
+                technologies={["React", "JavaScript", "CSS", "asdasd"]}
               />
-                    </Suspense>
+            </Suspense>
           </div>
           <div id="workBox" className="axel" data-aos="fade-right">
             <div
               className="hoverBg"
               onClick={onClickOpenAxel}
               onClickOpen={() => setOpenAxel(true)}
+              id="cardPopup"
             >
               <div className="hoverInfo">
                 <h4>Axel Creatures</h4>
@@ -350,16 +354,16 @@ function Work() {
               </div>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
-            <Modal
-              open={openAxel}
-              onClose={onClickCloseAxel}
-              name="Axel"
-              image={axelLaptop}
-              website="axelcreatures.io"
-              webLink="https://www.axelcreatures.io/"
-              technologies={["React", "JavaScript", "CSS", "asdasd"]}
+              <Modal
+                open={openAxel}
+                onClose={onClickCloseAxel}
+                name="Axel"
+                image={axelLaptop}
+                website="axelcreatures.io"
+                webLink="https://www.axelcreatures.io/"
+                technologies={["React", "JavaScript", "CSS", "asdasd"]}
               />
-                    </Suspense>
+            </Suspense>
           </div>
           <div
             id="workBox"
@@ -371,6 +375,7 @@ function Work() {
               className="hoverBg"
               onClick={onClickOpenUnity}
               onClickOpen={() => setOpenUnity(true)}
+              id="cardPopup"
             >
               <div className="hoverInfo">
                 <h4>Unity3</h4>
@@ -389,22 +394,23 @@ function Work() {
               </div>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
-            <Modal
-              open={openUnity}
-              onClose={onClickCloseUnity}
-              name="Unity"
-              image={unityLaptop}
-              website="unity3.io"
-              webLink="https://www.unity3.io/"
-              technologies={["React", "JavaScript", "CSS", "asdasd"]}
+              <Modal
+                open={openUnity}
+                onClose={onClickCloseUnity}
+                name="Unity"
+                image={unityLaptop}
+                website="unity3.io"
+                webLink="https://www.unity3.io/"
+                technologies={["React", "JavaScript", "CSS", "asdasd"]}
               />
-                    </Suspense>
+            </Suspense>
           </div>
           <div id="workBox" className="resellersBasement" data-aos="fade-up">
             <div
               className="hoverBg"
               onClick={onClickOpenRb}
               onClickOpen={() => setOpenRb(true)}
+              id="cardPopup"
             >
               <div className="hoverInfo">
                 <h4>Resellers Basement</h4>
@@ -423,16 +429,16 @@ function Work() {
               </div>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
-            <Modal
-              open={openRb}
-              onClose={onClickCloseRb}
-              name="Resellers Basement"
-              image={rbLaptop}
-              website="resellers-basement.com"
-              webLink="https://resellers-basement.com/"
-              technologies={["React", "JavaScript", "CSS", "asdasd"]}
+              <Modal
+                open={openRb}
+                onClose={onClickCloseRb}
+                name="Resellers Basement"
+                image={rbLaptop}
+                website="resellers-basement.com"
+                webLink="https://resellers-basement.com/"
+                technologies={["React", "JavaScript", "CSS", "asdasd"]}
               />
-                    </Suspense>
+            </Suspense>
           </div>
         </div>
       </div>
@@ -471,31 +477,66 @@ function Slideshow() {
         >
           <SwiperSlide>
             {" "}
-            <img className="laptopDisplay" src={frugalLaptop} alt="logo" loading="lazy"/>
+            <img
+              className="laptopDisplay"
+              src={frugalLaptop}
+              alt="logo"
+              loading="lazy"
+            />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <img className="laptopDisplay" src={resellologyLaptop} alt="logo" loading="lazy"/>
+            <img
+              className="laptopDisplay"
+              src={resellologyLaptop}
+              alt="logo"
+              loading="lazy"
+            />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <img className="laptopDisplay" src={freebieLaptop} alt="logo" loading="lazy"/>
+            <img
+              className="laptopDisplay"
+              src={freebieLaptop}
+              alt="logo"
+              loading="lazy"
+            />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <img className="laptopDisplay" src={unityLaptop} alt="logo" loading="lazy"/>
+            <img
+              className="laptopDisplay"
+              src={unityLaptop}
+              alt="logo"
+              loading="lazy"
+            />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <img className="laptopDisplay" src={axelLaptop} alt="logo"loading="lazy" />
+            <img
+              className="laptopDisplay"
+              src={axelLaptop}
+              alt="logo"
+              loading="lazy"
+            />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <img className="laptopDisplay" src={fittedLaptop} alt="logo" loading="lazy"/>
+            <img
+              className="laptopDisplay"
+              src={fittedLaptop}
+              alt="logo"
+              loading="lazy"
+            />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <img className="laptopDisplay" src={rbLaptop} alt="logo"loading="lazy" />
+            <img
+              className="laptopDisplay"
+              src={rbLaptop}
+              alt="logo"
+              loading="lazy"
+            />
           </SwiperSlide>
         </Swiper>
       )}
@@ -518,31 +559,66 @@ function Slideshow() {
       >
         <SwiperSlide>
           {" "}
-          <img className="mobileDisplay" src={frugalMobile} alt="logo" loading="lazy"/>
+          <img
+            className="mobileDisplay"
+            src={frugalMobile}
+            alt="logo"
+            loading="lazy"
+          />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <img className="mobileDisplay" src={resellologyMobile} alt="logo" loading="lazy"/>
+          <img
+            className="mobileDisplay"
+            src={resellologyMobile}
+            alt="logo"
+            loading="lazy"
+          />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <img className="mobileDisplay" src={freebieMobile} alt="logo"loading="lazy" />
+          <img
+            className="mobileDisplay"
+            src={freebieMobile}
+            alt="logo"
+            loading="lazy"
+          />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <img className="mobileDisplay" src={unityMobile} alt="logo"loading="lazy" />
+          <img
+            className="mobileDisplay"
+            src={unityMobile}
+            alt="logo"
+            loading="lazy"
+          />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <img className="mobileDisplay" src={axelMobile} alt="logo"loading="lazy" />
+          <img
+            className="mobileDisplay"
+            src={axelMobile}
+            alt="logo"
+            loading="lazy"
+          />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <img className="mobileDisplay" src={fittedMobile} alt="logo" loading="lazy"/>
+          <img
+            className="mobileDisplay"
+            src={fittedMobile}
+            alt="logo"
+            loading="lazy"
+          />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <img className="mobileDisplay" src={rbMobile} alt="logo" loading="lazy"/>
+          <img
+            className="mobileDisplay"
+            src={rbMobile}
+            alt="logo"
+            loading="lazy"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -569,4 +645,4 @@ function Home() {
   );
 }
 
-export default (Home);
+export default Home;
