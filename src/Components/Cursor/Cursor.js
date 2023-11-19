@@ -10,8 +10,8 @@ const Cursor = () => {
   const delay = 8;
   const _x = useRef(0);
   const _y = useRef(0);
-  const endX = useRef(window ? window.innerWidth / 2 : 0);
-  const endY = useRef(window ? window.innerHeight / 2 : 0);
+  const endX = useRef(window.innerWidth / 2);
+  const endY = useRef(window.innerHeight / 2);
 
   const cursorVisible = useRef(true);
   const cursorEnlarged = useRef(false);
@@ -19,7 +19,7 @@ const Cursor = () => {
   const requestRef = useRef(null);
 
   const toggleCursorVisibility = useCallback(() => {
-    if (dot?.current && dotOutline?.current) {
+    if (dot.current && dotOutline.current) {
       if (cursorVisible.current) {
         dot.current.style.opacity = "1";
         dotOutline.current.style.opacity = "1";
@@ -31,7 +31,7 @@ const Cursor = () => {
   }, []);
 
   const toggleCursorSize = useCallback(() => {
-    if (dot?.current && dotOutline?.current) {
+    if (dot.current && dotOutline.current) {
       if (cursorEnlarged.current) {
         setMouseActive(true);
       } else {
@@ -46,7 +46,7 @@ const Cursor = () => {
         cursorEnlarged.current = true;
         toggleCursorSize();
       }
-      
+
       if (e.target.id === "cardHover") {
         setLinkHovered(true);
       }
@@ -84,7 +84,7 @@ const Cursor = () => {
 
       endX.current = e.pageX;
       endY.current = e.pageY;
-      if (dot?.current) {
+      if (dot.current) {
         dot.current.style.top = endY.current + "px";
         dot.current.style.left = endX.current + "px";
       }
@@ -96,7 +96,7 @@ const Cursor = () => {
     _x.current += (endX.current - _x.current) / delay;
     _y.current += (endY.current - _y.current) / delay;
 
-    if (dotOutline?.current) {
+    if (dotOutline.current) {
       dotOutline.current.style.top = _y.current + "px";
       dotOutline.current.style.left = _x.current + "px";
     }
@@ -105,7 +105,7 @@ const Cursor = () => {
   }, [endX, endY]);
 
   useEffect(() => {
-    const requestRefs = requestRef?.current;
+    const requestRefs = requestRef.current;
 
     document.addEventListener("mousemove", mouseMoveEvent);
     document.addEventListener("mouseenter", mouseEnterEvent);
@@ -170,50 +170,67 @@ const CursorStyle = styled.div`
       box-shadow: inset 0 0 0px 0.5px var(--cursor-color);
     }
 
+    .cursor-dot,
+    .cursor-dot-outline:hover {
+      .cursor-dot {
+        width: 40px !important;
+        height: 40px !important;
+        mixBlendMode: difference;
+      }
+      .cursor-dot-outline {
+        display: none !important;
+      }
+
+      }
+  }
+
     ${({ cursorActive, linkHovered }) =>
-      cursorActive
-        ? css`
-            .cursor-dot {
-              transform: translate(-50%, -50%) scale(0.75);
-              &::before {
-                content: "Open";
-                position: absolute;
-                top: 50%;
-                font-weight: 500;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-                color: var(--text-hover);
-                background-color: var(--text-bg) !important;
-                left: 50%;
-                background: black;
-                border-radius: 50px;
-                padding: 2px 8px;
-                transform: translate(-50%, -50%);
-              }
-            }
-            .cursor-dot-outline {
-              box-shadow: none;
-              transform: translate(-50%, -50%) scale(1.7);
-            }
-            ${linkHovered &&
-              css`
-                .cursor-dot {
-                  width: 40px;
-                  height: 40px;
-                }
-                .cursor-dot-outline {
-                  display: none;
-                }
-              `}
-          `
-        : css`
-            .cursor-dot {
-              transform: translate(-50%, -50%) scale(1);
-            }
-            .cursor-dot-outline {
-              transform: translate(-50%, -50%) scale(1);
-            }
-          `}
+      cursorActive &&
+      css`
+        .cursor-dot {
+          transform: translate(-50%, -50%) scale(0.75);
+          &::before {
+            content: "Open";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--text-hover);
+            background-color: var(--text-bg) !important;
+            transform: translate(-50%, -50%);
+            padding: 2px 8px;
+            border-radius: 50px;
+          }
+        }
+        .cursor-dot-outline {
+          box-shadow: none;
+          transform: translate(-50%, -50%) scale(1.7);
+        }
+        ${linkHovered &&
+        css`
+          .cursor-dot {
+            width: 40px !important;
+            height: 40px !important;
+            mixBlendMode: difference;
+          }
+          .cursor-dot-outline {
+            display: none !important;
+          }
+        `}
+      `}
+
+    ${({ cursorActive }) =>
+      !cursorActive &&
+      css`
+        .cursor-dot {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        .cursor-dot-outline {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      `}
   }
 `;
 

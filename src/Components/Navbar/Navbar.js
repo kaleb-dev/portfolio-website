@@ -29,7 +29,7 @@ const Switcher = () => {
         onClick={handleClick}
         checked={theme === "dark"}
       />
-      <label for="darkmode-toggle">
+      <label for="darkmode-toggle" id="cardHover">
         <svg
           width="24"
           height="24"
@@ -156,8 +156,8 @@ const Navbar = ({ homeNav}) => {
             </a>
             <div className="navRight">
               <Switcher />
-              <div className="menu">
-                <button disabled={disabled} onClick={handleMenu}>
+              <div className="menu" >
+                <button disabled={disabled} onClick={handleMenu} id="cardHover">
                   {state.menuName}
                 </button>
               </div>

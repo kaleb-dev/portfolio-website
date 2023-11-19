@@ -62,7 +62,7 @@ const Modal = ({ open, onClose, name, image, webLink, website, technologies = []
                       <div className="website">
                         <SlGlobe size={20} color="black" />
                         <a
-                          className="webLink"
+                          className="webLink underline"
                           href={webLink}
                           target="_blank"
                           rel="noopener noreferrer"

@@ -17,7 +17,8 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#04050D" />
+    <meta name="theme-color" id="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/>
+    <meta name="theme-color" id="theme-color" media="(prefers-color-scheme: dark)" content="#171717" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Metadata -->
@@ -78,6 +79,14 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 1500, disable: "mobile", once: true });
+
+      if (document.body.classList.contains('dark')) {
+        metaThemeColor.media = '(prefers-color-scheme: dark)';
+        metaThemeColor.content = '#000000'; // Set the dark mode color
+      } else {
+        metaThemeColor.media = '(prefers-color-scheme: light)';
+        metaThemeColor.content = '#ffffff'; // Set the light mode color
+      }
     </script>
   </body>
 </html>

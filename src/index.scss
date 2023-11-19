@@ -1,5 +1,4 @@
-@import './Assets/Fonts/Ilisarniq/style.css';
-
+@import "./Assets/Fonts/Ilisarniq/style.css";
 
 $font-1: "Ilisarniq-Light", sans-serif;
 $font-2: "Ilisarniq-Bold", sans-serif;
@@ -7,7 +6,6 @@ $font-3: "D-DIN Condensed", sans-serif;
 $font-4: "Ilisarniq-Regular ", sans-serif;
 $font-5: "D-DIN Condensed", sans-serif;
 $font-6: "Poppins", sans-serif;
-
 
 body {
   margin: 0;
@@ -17,23 +15,31 @@ body {
   background-color: #ffffff !important;
   color: white !important;
   overflow-x: hidden !important;
-
+  cursor: none !important;
   scroll-behavior: smooth;
   transition: 0.5s ease-in-out;
   // cursor: auto !important;
-  
+}
 
+* {
+  cursor: none !important;
 }
 
 
-h1,h2,h3,h5,p,a,textarea, input  {
+h1,
+h2,
+h3,
+h5,
+p,
+a,
+textarea,
+input,
+button {
   color: black;
 }
 
-
 html {
   scroll-behavior: smooth;
-  
 }
 
 code {
@@ -53,13 +59,13 @@ h1 {
 }
 
 h3 {
-    font-family: $font-3;
-    font-size: 24px !important;
+  font-family: $font-3;
+  font-size: 24px !important;
 }
 
 h2 {
-    font-family: $font-2;
-    font-size: 40px !important;
+  font-family: $font-2;
+  font-size: 40px !important;
 }
 
 h4 {
@@ -74,10 +80,10 @@ h6 {
   color: #f9f7f6;
   letter-spacing: 1rem;
   font-size: 29.42vmin !important;
-    writing-mode: unset;
-    letter-spacing: -0.3rem;
-    white-space: pre;
-    bottom: 20px;
+  writing-mode: unset;
+  letter-spacing: -0.3rem;
+  white-space: pre;
+  bottom: 20px;
 }
 
 li {
@@ -86,8 +92,8 @@ li {
 }
 
 h5 {
-    font-family: $font-3;
-    font-size: 250px !important;
+  font-family: $font-3;
+  font-size: 250px !important;
 }
 
 p {
@@ -98,13 +104,15 @@ p {
   // margin-bottom: 0 !important;
 }
 
-textarea, input {
+textarea,
+input {
   font-family: $font-1 !important;
 }
 
 a {
   text-decoration: none !important;
   color: unset !important;
+  cursor: none !important;
 }
 
 .dark {
@@ -115,29 +123,37 @@ a {
   --text-bg: #fff;
 
   h6 {
-    color:#060809;
+    color: #060809;
   }
 
-
-  h1,h2,h3,h5,p,a {
+  h1,
+  h2,
+  h3,
+  h5,
+  p,
+  a,
+  button {
     color: #ffffff;
+    cursor: none !important;
   }
 
-  .underline, .menu, .listText {
-  &::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: width 0.3s;
- }
+  .underline,
+  .menu,
+  .listText {
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width 0.3s;
+    }
 
- &:hover::after {
-    width: 100%;
-    transition: width 0.3s;
- }
-}
+    &:hover::after {
+      width: 100%;
+      transition: width 0.3s;
+    }
+  }
 }
 
 .light {
@@ -145,21 +161,74 @@ a {
   --text-hover: #fff;
   --text-bg: #000;
 
-  .underline, .menu, .listText {
+  .underline,
+  .menu,
+  .listText {
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 0;
       height: 2px;
       background: #000;
       transition: width 0.3s;
-   }
-  
-   &:hover::after {
+    }
+
+    &:hover::after {
       width: 100%;
       transition: width 0.3s;
-   }
+    }
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #171717;
+  }
+}
 
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 1100px) {
+  .underline,
+  .menu,
+  .listText {
+    &::after {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .underline,
+    .menu,
+    .listText {
+      &::after {
+        display: none !important;
+      }
+    }
+  }
+}
+
+#cardHover {
+  .cursor-dot {
+    width: 40px !important;
+    height: 40px !important;
+    mix-blend-mode: difference;
+    .cursor-dot-outline {
+      display: none !important;
+    }
+  }
+}
+
+.notification {
+  background: #296679;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px !important;
+  font-family: $font-2 !important;
+  letter-spacing: -0.03em;
+}
